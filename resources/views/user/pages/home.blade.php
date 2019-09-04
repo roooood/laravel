@@ -3,5 +3,5 @@
     haraji
 @stop
 @section('content')
-  test
+  
 @stop

@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('front.pages.home');
 });
-Route::get('/panel', function () {
-    return view('user.pages.home');
+
+Route::group(['middleware' => ['jwt.verify']], function() {
+    Route::get('/panel', 'UserPanelContoroller@index');
 });
 

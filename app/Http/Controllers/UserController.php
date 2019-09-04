@@ -9,6 +9,7 @@ use App\Token;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 use JWTAuth;
+// use Illuminate\Support\Facades\Session;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Tymon\JWTAuth\Facades\JWTFactory;
 
@@ -53,22 +54,23 @@ class UserController extends Controller
             if($token){
                 $token->used = true;
                 $token->save();
-
+                $user_data = [
+                    'id' => $user->id
+                ];
                 $factory = JWTFactory::customClaims([
                     'sub'   => 'user',
                     'ttl'   => env('JWT_TTL', null),
-                    'user'  => [
-                                    'id' => $user->id
-                               ]
+                    'user'  => $user_data
                 ]);
                 $payload = $factory->make();
                 $token = JWTAuth::encode($payload)->get();
+
                 return response()->json([
                     'success' => true,
                     'data' =>[
                         'token' => $token   
                     ]
-                ]); 
+                ])->withCookie(cookie()->forever('token',$token)); 
             }
             
            

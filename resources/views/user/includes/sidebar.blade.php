@@ -8,15 +8,14 @@
                   <!--change to offline or busy as needed-->
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">David Grey. H</span>
-                  <span class="text-secondary text-small">Project Manager</span>
+                  <span class="font-weight-bold mb-2">{{$user->username()}}</span>
                 </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                <i class="mdi {{$user->verified?'mdi-bookmark-check text-success':'mdi-bookmark-remove text-danger'}} nav-profile-badge"></i>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html">
-                <span class="menu-title">پروفایل من</span>
+                <span class="menu-title">{{__("my profile")}}</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
@@ -33,30 +32,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/icons/mdi.html">
-                <span class="menu-title">Icons</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/forms/basic_elements.html">
-                <span class="menu-title">Forms</span>
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/charts/chartjs.html">
-                <span class="menu-title">Charts</span>
-                <i class="mdi mdi-chart-bar menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/tables/basic-table.html">
-                <span class="menu-title">Tables</span>
-                <i class="mdi mdi-table-large menu-icon"></i>
-              </a>
-            </li>
+           
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                 <span class="menu-title">Sample Pages</span>

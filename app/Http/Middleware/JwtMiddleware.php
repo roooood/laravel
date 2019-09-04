@@ -1,7 +1,7 @@
 <?php
 
     namespace App\Http\Middleware;
-
+    use Cookie;
     use Closure;
     use JWTAuth;
     use Exception;
@@ -20,8 +20,9 @@
         public function handle($request, Closure $next)
         {
             try {
-                $token = JWTAuth::parseToken($request->get('token'));//->toUser() - authenticate
-                $payload = $token->getPayload();
+                $token = $request->has('token') ? $request->get('token') : Cookie::get('token');
+                $parse = JWTAuth::parseToken($token);//->toUser() - authenticate
+                $payload = $parse->getPayload();
                 $request->merge(['user'=>$payload['user']]);
             } catch (Exception $e) {
                 if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException){

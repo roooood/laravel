@@ -39,4 +39,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Token::class,'user_id');
     }
+    public function username()
+    {
+        if($this->name == null and $this->family == null){
+            return __('user');
+        }
+        return $this->name .' '. $this->family;
+    }
+
 }

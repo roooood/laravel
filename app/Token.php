@@ -34,7 +34,6 @@ class Token extends Model
         $min = pow(10, $codeLength);
         $max = $min * 10 - 1;
         $code = mt_rand($min, $max);
-
         return $code;
     }
 
