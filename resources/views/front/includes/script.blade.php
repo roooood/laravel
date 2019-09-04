@@ -1,0 +1,13 @@
+  <script src="{{asset('front/lib/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('front/lib/jquery/jquery-migrate.min.js')}}"></script>
+  <script src="{{asset('front/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('front/lib/axios/axios.min.js')}}"></script>
+  <script src="{{asset('front/lib/superfish/hoverIntent.js')}}"></script>
+  <script src="{{asset('front/lib/superfish/superfish.min.js')}}"></script>
+  <script src="{{asset('front/lib/easing/easing.min.js')}}"></script>
+  <script src="{{asset('front/lib/wow/wow.min.js')}}"></script>
+  <script src="{{asset('front/lib/pincode/bootstrap-pincode-input.js')}}"></script>
+  <script src="{{asset('front/lib/modal-steps/modal-steps.js')}}"></script>
+  <script src="{{asset('front/lib/count-down/count-down.js')}}"></script>
+  <script src="{{asset('front/js/main.js')}}"></script>
+  <script src="{{asset('front/js/login.js')}}"></script>
