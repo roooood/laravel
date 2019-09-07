@@ -14,8 +14,13 @@ class UserPanelContoroller extends Controller
     public function index(Request $request)
     {
         $user = User::find($request->user->id);
-        //$user = $users->username();
-       return view('user.pages.home',compact('user'));
+       return view('user.pages.home',compact('user','request'));
+    }
+    
+    public function profile($page ,Request $request)
+    {
+        $user = User::find($request->user->id);
+       return view('user.pages.profile',compact('user','request','page'));
     }
     
    

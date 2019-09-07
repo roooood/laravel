@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('/panel', 'UserPanelContoroller@index');
+    Route::get('/profile/{page}', 'UserPanelContoroller@profile');
 });
 

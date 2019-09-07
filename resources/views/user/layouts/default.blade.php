@@ -4,15 +4,13 @@
   <title>@yield('title')</title>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
-
     <link href="{{asset('user/vendors/mdi/css/materialdesignicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('user/vendors/mdi/css/vendor.bundle.base.css')}}" rel="stylesheet">
 
     <link href="{{asset('user/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('user/css/custom.css')}}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="user/assets/images/favicon.png" />
 </head>
 
 <body class="rtl">

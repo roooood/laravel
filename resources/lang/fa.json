@@ -1,5 +1,21 @@
 {
     "title": "Haraji",
+    "user": "کاربر",
     "my profile": "پروفایل من",
-    "user": "کاربر"
+    "dashboard": "داشبرد",
+    "makeAuction": "ایجاد مزایده",
+    "auctionOwner": "ایجاد مزایده",
+    "auctionCompany": "شرکت در مزایده",
+    "orders": "تعداد  سفارشات",
+    "profile": "پروفایل",
+    "basicInfo": "اطلاعات پایه",
+    "name": "نام",
+    "family": "نام خانوادگی",
+    "gender": "جنسیت",
+    "male": "آقا",
+    "fmale": "خانوم",
+    "idNumber": "کد ملی",
+    "advanceInfo": "اطلاعات تکمیلی",
+    "accountInfo": "اطلاعات کاربری",
+    "submit": "بروز رسانی"
 }

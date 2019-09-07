@@ -48,7 +48,7 @@ function active(cb, type) {
         res: (success, res) => {
           if (success) {
             localStorage.setItem("token", res.token);
-            cb();
+            // cb();
           } else {
             $('#active-msg').fadeIn(500);
           }
